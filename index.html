@@ -17,32 +17,24 @@
     <!-- Content -->
 <div class="d-flex justify-content-center">
     <header>
-        <h1>Code Maker and Breaker</h1>
+        <h1>Too Many Secrets!</h1>
     </header>
-    </div>
-    <!-- Begin Word Form -->
-    <div class="d-flex justify-content-center">
-        <form id="wordForm" class="w-50 p-3">
-            <div class="form-group">
-                <label class="wordLabel" for="inputWord">Input Word Here</label>
-                <input type="text" class="form-control" id="inputWord" placeholder="Enter Your Word">
-            </div>
-                <button type="submit" class="btn btn-warning w-50" id='wordButton'>Encrypt!</button>
-        </form>
-            <div id="codePrint"></div>
-    </div>
-    <!-- Begin Code Form -->
-    <div class="d-flex justify-content-center">
-        <form id="wordForm" class="w-50 p-3">
-            <div class="form-group">
-                <label class="wordLabel" for="inputCode">Input Secret Here</label>
-                <input type="text" class="form-control" id="inputCode" placeholder="Enter Your Secret">
-            </div>
-                <button type="submit" class="btn btn-danger w-50" id='codeButton'>Decrypt!</button>
-        </form>
-            <div id="wordPrint"></div>
-    </div>
 </div>
+    <div id='encrypt'>
+        <div>
+            <input type="text" id='wordToEncypt'>
+            <button type="submit" class="btn btn-warning" id='encryptButton'>Encrypt Your Message!</button>
+        </div> 
+        <div id='encrypt'></div>   
+    </div>
+    <hr>
+    <div id='decrypt'>
+        <div>
+            <button type="submit" class="btn btn-danger" id='decryptButton'>Decrypt Your Message!</button>
+            <input type="text" id='codeToDecrypt'>
+        </div>
+        <div id='decrypt'></div>   
+    </div>
 </body>
 <!-- Bootstrap JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
