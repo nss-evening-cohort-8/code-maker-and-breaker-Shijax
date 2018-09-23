@@ -20,7 +20,7 @@ const encrypt = () => {
     for (i = 0; i < encryptStr.length; i++) {
         let coded = encryptStr[i].charCodeAt();
         encryptArr.push(coded);
-        encryptdMsg = "Your encrypted message is: " + encryptArr;
+        encryptdMsg = "<b>Your encrypted message is:</b> " + encryptArr;
         printToDom(encryptdMsg, 'encrypt');
     }
 };
@@ -32,7 +32,7 @@ const decrypt = () => {
     let decryptArr = decryptElem.value.split(",");
     for (i = 0; i < decryptArr.length; i++) {
         decryptd += String.fromCharCode(decryptArr[i]);
-        decryptdMsg = "Your decrypted message is: " + decryptd;
+        decryptdMsg = "<b>Your decrypted message is:</b> " + decryptd;
         printToDom(decryptdMsg, 'decrypt');
     }
 };
