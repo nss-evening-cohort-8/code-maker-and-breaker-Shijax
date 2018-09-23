@@ -37,14 +37,14 @@ const decrypt = () => {
     }
 };
 
-// Encryption Event Listener
+// Encryption Event Listener and Call
 encryptButtonElem.addEventListener('click', (e) => {
     e.preventDefault();
     encrypt();
     }
 );
 
-// Decryption Event Listener
+// Decryption Event Listener and Call
 decryptButtonElem.addEventListener('click', (e) => {
     e.preventDefault();
     decrypt();

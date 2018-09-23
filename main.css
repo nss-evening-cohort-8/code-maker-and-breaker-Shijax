@@ -1,15 +1,16 @@
 /* CSS for Body Element */
 body {
-    background-image: url("../img/codebg.jpg");
+    background-image: url("../img/secret.jpg");
     background-size: cover;
-    color: yellow;
+    font-size: 1.5em;
 }
 
 /* CSS for Title Element */
 h1 {
-    font-size: 4em;
-    color: greenyellow;
-    font-family: fantasy;
+    font-size: 5em;
+    letter-spacing: 25px;
+    color: rgba(190, 11, 11, 0.897);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 20px;
     text-transform: uppercase;
 }
