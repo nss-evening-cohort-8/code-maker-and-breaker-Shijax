@@ -1,18 +1,52 @@
-const wordCodeElem = document.getElementById('inputWord');
-const codeWordElem = document.getElementById('inputCode');
-const wordToButton = document.getElementById('wordButton');
-const codeToButton = document.getElementById('codeButton');
+// Input Fields
+const encryptElem = document.getElementById('wordToEncypt');
+const decryptElem = document.getElementById('codeToDecrypt');
 
-const printToDom = (stringToPrint, whereToPrint) => {
-    document.getElementById(whereToPrint).innerHTML += stringToPrint;
-}
+// Buttons
+const encryptButtonElem = document.getElementById('encryptButton');
+const decryptButtonElem = document.getElementById('decryptButton');
 
-var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+// Print Strings to DOM
+const printToDom = (stringToPrint, divId) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML = stringToPrint;
+};
 
-letters.forEach(function(element) {
-  console.log(element);
-});
+// Encyption Function
+const encrypt = () => {
+    let encryptdMsg = '';
+    let encryptArr = [];
+    let encryptStr = encryptElem.value.split("");
+    for (i = 0; i < encryptStr.length; i++) {
+        let coded = encryptStr[i].charCodeAt();
+        encryptArr.push(coded);
+        encryptdMsg = "Your encrypted message is: " + encryptArr;
+        printToDom(encryptdMsg, 'encrypt');
+    }
+};
 
-function logArrayElements(element, index, array) {
-    console.log('a[' + index + '] = ' + element);
-  }
+// Decryption Function
+const decrypt = () => {
+    let decryptdMsg = '';
+    let decryptd = "";
+    let decryptArr = decryptElem.value.split(",");
+    for (i = 0; i < decryptArr.length; i++) {
+        decryptd += String.fromCharCode(decryptArr[i]);
+        decryptdMsg = "Your decrypted message is: " + decryptd;
+        printToDom(decryptdMsg, 'decrypt');
+    }
+};
+
+// Encryption Event Listener
+encryptButtonElem.addEventListener('click', (e) => {
+    e.preventDefault();
+    encrypt();
+    }
+);
+
+// Decryption Event Listener
+decryptButtonElem.addEventListener('click', (e) => {
+    e.preventDefault();
+    decrypt();
+    }
+);

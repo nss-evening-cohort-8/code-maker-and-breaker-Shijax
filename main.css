@@ -1,0 +1,31 @@
+/* CSS for Body Element */
+body {
+    background-image: url("../img/codebg.jpg");
+    background-size: cover;
+    color: yellow;
+}
+
+/* CSS for Title Element */
+h1 {
+    font-size: 4em;
+    color: greenyellow;
+    font-family: fantasy;
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+/* Css for Form Divs */
+#encrypt, #decrypt  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+}
+
+/* Css for Print to DOM Divs */
+#encrypt, #derypt {
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+}
