@@ -9,3 +9,29 @@
 
 <img src="https://github.com/nss-evening-cohort-8/code-maker-and-breaker-Shijax/blob/master/img/too_many_secrets.jpeg">
 
+## How to run this project:
+
+* Use nmp to install htpp-server:
+
+```sh
+
+npm install -g http-server
+
+```
+* Run the server:
+
+```sh
+
+hs -p 9999
+
+```
+
+* Open Chrome and navigate to:
+
+```
+
+localhost:9999
+
+```
+
+
